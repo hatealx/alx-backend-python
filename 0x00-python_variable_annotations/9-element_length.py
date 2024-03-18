@@ -1,4 +1,4 @@
-i#!/usr/bin/env python3
+#!/usr/bin/env python3
 """A variable length:
 Let's duck type an iterable object"""
 import typing
