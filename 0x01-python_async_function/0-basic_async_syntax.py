@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-"""my coroutine fuction"""
+
+
 import asyncio
 import random
+
+
+"""my coroutine fuction module"""
 
 
 async def wait_random(max_delay=10):
