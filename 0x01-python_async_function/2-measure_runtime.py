@@ -4,12 +4,15 @@
 """
 import time
 
+# Import wait_n from the previous file
 wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
-async def measure_time(n: int, max_delay: int) -> float:
+def measure_time(n: int, max_delay: int) -> float:
+    """Measure the total execution time for wait_n(n, max_delay) and return the average time per call."""
     start = time.time()
-    await wait_n(n, max_delay)
+    for _ in range(n):
+        wait_n(n, max_delay)  # Call wait_n function
     end = time.time()
 
     total_time = end - start
